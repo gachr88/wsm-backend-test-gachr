@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Hello ReportsController
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-3 reports">
+        <header>
+            <h1>Hello ReportsController!</h1>
+        </header>
+        <p >
+            Please enter the Account ID you'd like to display:
+        </p>
+        <div class="row">
+            <div class="col-2">
+                <input type="text" id="accountId" name="accountId" class="form-control inp-account" placeholder="Account ID"  />
+                <span class="invalid-feedback ">aasdf</span>
+            </div>
+
+            <div class="mt-1 mb-5">
+                <button type="button" id="btnGetData" class="btn btn-info btn-sm">GET DATA</button>
+                <button type="button" id="btnShowAll" class="btn btn-info btn-sm">SHOW ALL</button>
+            </div>
+        </div>
+        <div>
+            <p>Aggregated performance for All <strong>ACTIVE</strong> accounts is listed below:</p>
+            <table class="table table-hover report-table">
+                <thead>
+                <tr>
+                    <th>Account Name</th>
+                    <th>Account ID</th>
+                    <th>Spend</th>
+                    <th>Clicks</th>
+                    <th>Impressions</th>
+                    <th>Cost per Click</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% if content|length > 0  %}
+                    {% for item in content %}
+                        <tr>
+                            <td>{{ item.accountName }}</td>
+                            <td>{{ item._id }}</td>
+                            <td>{{ item.spend }}</td>
+                            <td>{{ item.clicks }}</td>
+                            <td>{{ item.impressions }}</td>
+                            <td>{{ item.costPerClick }}</td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="6" class="text-center">No data available for the supplied Account Id</td>
+                    </tr>
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
