@@ -10,3 +10,23 @@ import './styles/app.css';
 
 // start the Stimulus application
 import './bootstrap';
+
+import $ from 'jquery';
+
+
+$(function (){
+    (function(){
+
+        $("#btnGetData").click(function (){
+            let accountId = $('#accountId').val();
+            if(accountId){
+                window.location.href = "/helloReport?accountId="+ accountId;
+            }
+
+        });
+
+        $("#btnShowAll").click(function (){
+            window.location.href = "/helloReport";
+        });
+    })();
+})

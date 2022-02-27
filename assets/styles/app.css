@@ -1,3 +1,37 @@
-body {
-    background-color: lightgray;
+@import "~bootstrap";
+
+.reports
+{
+    font-size: .9rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.btn-info{
+    background-color: #26a69a;
+    color: #fff;
+    border-color: #145c56;
+}
+
+.btn-info:hover{
+    background-color: #1c8379;
+    color: #fff;
+    border-color: #145c56;
+}
+
+.btn-info:active, .btn-info:focus{
+    background-color: #1c8379;
+    color: #fff;
+    border-color: #145c56;
+}
+
+.inp-account
+{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+}
+
+.report-table
+{
+    border-top: 2px solid #cbcbcb;
 }
