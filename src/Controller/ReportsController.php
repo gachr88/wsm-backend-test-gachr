@@ -26,7 +26,7 @@ class ReportsController extends AbstractController
     {
         $accountId = $request->get('accountId');
         $reports = $this->documentManager->getRepository(Account::class);
-        dump($request->query);
+        //dump($request->query);
         if(isset($accountId)) {
             $rst = $reports->getByFilters(["accountId" => $accountId]);
         }
