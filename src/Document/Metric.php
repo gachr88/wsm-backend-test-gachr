@@ -27,32 +27,32 @@ class Metric
     private $accountId;
 
     /**
-     * @MongoDB\Field(type="numeric")
+     * @MongoDB\Field(type="float")
      */
     private $impressions;
 
     /**
-     * @MongoDB\Field(type="numeric")
+     * @MongoDB\Field(type="float")
      */
     private $clicks;
 
     /**
-     * @MongoDB\Field(type="numeric")
+     * @MongoDB\Field(type="float")
      */
     private $ctr;
 
     /**
-     * @MongoDB\Field(type="numeric")
+     * @MongoDB\Field(type="float")
      */
     private $conversions;
 
     /**
-     * @MongoDB\Field(type="numeric")
+     * @MongoDB\Field(type="float")
      */
     private $costPerClick;
 
     /**
-     * @MongoDB\Field(type="numeric")
+     * @MongoDB\Field(type="float")
      */
     private $spend;
 
